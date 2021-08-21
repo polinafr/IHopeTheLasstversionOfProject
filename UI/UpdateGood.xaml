@@ -1,0 +1,53 @@
+﻿<Window x:Class="ShoppingSystem.UpDate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShoppingSystem"
+        mc:Ignorable="d"
+        Title="UpDate" Height="450" Width="800">
+    <Grid Background="#FF27EFD7" OpacityMask="#FF27EFD7">
+        <Button BorderBrush="AntiqueWhite"  Content="עדכן" FontSize="30" FontFamily="David" FontWeight="DemiBold" Foreground="#FF27EFD7" Background ="#DC143C" HorizontalAlignment="Left" Margin="486,57,0,0" VerticalAlignment="Top" Width="249" Height="53">
+        </Button>
+        <ListView Name="Goods" HorizontalAlignment="Left" Background="#7FFFD4" Height="360" Margin="30,28,0,0" VerticalAlignment="Top" Width="342">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Ellipse Fill=" 	#FFE4E1" HorizontalAlignment="Left"  Height="60" Margin="569,239,-247.667,0" Stroke="Black" VerticalAlignment="Top" Width="472" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-71.743"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="90.941"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+            
+        </Ellipse>
+        <Ellipse Fill="#DDA0DD" HorizontalAlignment="Left" Height="60" Margin="475,303,-153.667,0" Stroke="Black" VerticalAlignment="Top" Width="472" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-71.743"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="90.941"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Ellipse Fill=" 	#FFE4E1" HorizontalAlignment="Left" Height="60" Margin="575
+                 ,357,-254.667,0" Stroke="Black" VerticalAlignment="Top" Width="472" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-71.743"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="90.941"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+
+    </Grid>
+</Window>

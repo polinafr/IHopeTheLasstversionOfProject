@@ -3,6 +3,9 @@ using DAL.Enums;
 using DAL.Repositories.BucketN;
 using DAL.Repositories.GoodN;
 using System.Collections.Generic;
+using BL;
+using PdfSharp.Pdf;
+using PdfSharp.Drawing;
 
 namespace LaughingPalmTree_Demo
 {
@@ -39,6 +42,17 @@ namespace LaughingPalmTree_Demo
             // Get all goods, all buckets
             List<Good> allGoods = goodRepository.GetAll();
             List<Bucket> allBuckets = bucketRepository.GetAll();
+
+            IBL bl = new BLimp();
+            bl.saveToPDF(null, BL.GraphType.Pie);
+
+            PdfDocument pdf = new PdfDocument();
+            PdfPage pdfPage = pdf.AddPage();
+            XGraphics graph = XGraphics.FromPdfPage(pdfPage);
+            XFont font = new XFont("Verdana", 20, XFontStyle.Bold);
+            graph.DrawString("This is my first PDF document", font, XBrushes.Black,
+                new XRect(0, 0, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
+            pdf.Save("firstpage.pdf");
         }
     }
 }

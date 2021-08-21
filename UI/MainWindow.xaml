@@ -1,0 +1,385 @@
+﻿<Window x:Class="UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="#181735" >
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text=" Your" Foreground="AntiqueWhite" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Aharoni"/>
+            <TextBlock Text=" personal" Foreground="AntiqueWhite" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Aharoni"/>
+            <TextBlock Text=" shopping " Foreground="AntiqueWhite" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Aharoni"/>
+            <TextBlock Text=" tracker" Foreground="AntiqueWhite" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Aharoni"/>
+            <TextBlock Text=" and" Foreground="AntiqueWhite" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Aharoni"/>
+            <TextBlock Text=" advisor" Foreground="AntiqueWhite" Grid.Column="6" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Aharoni"/>
+            <Image Height="50" Width="50" Source="C:\Users\Polina\source\repos\IHopeTheLasstversionOfProject\UI\Images\pic.jpg" RenderTransformOrigin="0.26,-0.74"/>
+            <Button Click="ret" Grid.ColumnSpan="2" Name="ReturnButton" Content="לתפריט הראשי" Grid.Column="12" HorizontalAlignment="Left" Height="31" Margin="0,23,0,0" VerticalAlignment="Top" Width="104">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="TextElement.FontFamily" Value="Aharoni"/>
+                        <Setter Property="Background" Value="#FD8AF8"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FA63F3"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="100" Height="25" CornerRadius="12" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+
+        <StackPanel x:Name="mainButtons" Visibility="Hidden" Grid.Column="0"  Orientation="Vertical" Margin="0,101,0,-250.333">
+
+            <StackPanel Orientation="Horizontal" >
+
+
+            </StackPanel>
+            <StackPanel Grid.Row="3" Orientation="Horizontal" RenderTransformOrigin="0.512,2.4">
+                <Button Content="קניה חדשה" Height="40" Width="300" Click="newShopping">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Aharoni"/>
+                            <Setter Property="Background" Value="#FE6584"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FF4C70"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="100" Height="25" CornerRadius="12" Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="3">
+                <Button Content="עדכון מוצר" Height="40" Click="updateGood" Width="300">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Aharoni"/>
+                            <Setter Property="Background" Value="#C71585"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#a2006d"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="100" Height="25" CornerRadius="12" Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </StackPanel>
+            <StackPanel Grid.Row="3" Orientation="Horizontal" RenderTransformOrigin="0.512,2.4">
+                <Button Content="קניות קודמות" Height="40" Click="previousLists" Width="300">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Aharoni"/>
+                            <Setter Property="Background" Value="#ba55d3"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#9955bb"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="100" Height="25" CornerRadius="12" Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+
+
+            </StackPanel>
+            <StackPanel Grid.Row="3" Orientation="Horizontal" RenderTransformOrigin="0.512,2.4">
+                <Button Content="סטטיסטיקות" Height="40" Width="300">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Aharoni"/>
+                            <Setter Property="Background" Value="#ffbc8c"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#ffa565"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="100" Height="25" CornerRadius="12" Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+
+
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel x:Name="newShoppingList" Visibility="Hidden" Grid.Column="0"  Orientation="Vertical" Margin="0,101,0,-250.333">
+            <StackPanel Grid.Row="3" Orientation="Horizontal" RenderTransformOrigin="0.512,2.4">
+                <Button Content="סרוק מוצר" Height="40" Width="300" Click="ScanQR">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Aharoni"/>
+                            <Setter Property="Background" Value="#FE6584"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FF4C70"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="100" Height="25" CornerRadius="12" Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="3">
+                <Button Content="מחק מוצר" Click ="deleteGood" Height="40" Width="300">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Aharoni"/>
+                            <Setter Property="Background" Value="#C71585"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#a2006d"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="100" Height="25" CornerRadius="12" Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </StackPanel>
+            <StackPanel Grid.Row="3" Orientation="Horizontal" RenderTransformOrigin="0.512,2.4">
+                <Button Content="סיים קניה" Click="FinishShopping" Height="40" Width="300">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Aharoni"/>
+                            <Setter Property="Background" Value="#ba55d3"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#9955bb"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="100" Height="25" CornerRadius="12" Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+
+
+            </StackPanel>
+
+        </StackPanel>
+
+
+        <Grid x:Name="updateGoodGrid" Visibility="Hidden"  Margin="0,101,10,-305.333" Grid.ColumnSpan="2" RenderTransformOrigin="0.366,0.517" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="43*"></ColumnDefinition>
+                <ColumnDefinition Width="115*"></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <ListView Margin="94.333,10,0,43.667" Background="#98AFC7" Opacity="0.7" Grid.Column="1" Grid.RowSpan="2">
+                <ScrollBar Height="237" Width="11" Background="#2B547E"/>
+            </ListView>
+            <TextBlock Grid.Row="0" Grid.Column="0" Height="20" Width ="150" TextAlignment="Center" Text="דרך לתמונה" Background="#FFCEAB" Margin="149,45,491,87.667" Grid.ColumnSpan="2"/>
+            <TextBlock Grid.Row="0" Grid.Column="0" Width ="150" Height="20" TextAlignment="Center" Text="תיאור מוצר" Background="#FFCEAB" Margin="149,93,491,39.667" Grid.ColumnSpan="2"/>
+            <Button Content="נווט" Grid.Column="0" Grid.Row="0"  Height="40" Click="ScanQR" Margin="0,35,0,77.667" RenderTransformOrigin="0.46,0.042" HorizontalAlignment="Left" Width="124">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="TextElement.FontFamily" Value="Aharoni"/>
+                        <Setter Property="Background" Value="#ffbc8c"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#ffa565"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="100" Height="25" CornerRadius="12" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <StackPanel Grid.Row="1" Orientation="Horizontal" RenderTransformOrigin="0.512,2.4" Margin="0,0.333,0.667,-0.333">
+                <Button Content="עדכן מוצר" Grid.Column="0" Grid.Row="0" Height="40" Width="300" Click="ScanQR">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Aharoni"/>
+                            <Setter Property="Background" Value="#FE6584"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FF4C70"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="100" Height="25" CornerRadius="12" Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+
+
+            </StackPanel>
+
+
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.RowSpan="2" Margin="160,-365,-610,85" Panel.ZIndex="-1">
+            <Grid.RenderTransform>
+                <RotateTransform Angle="50"/>
+            </Grid.RenderTransform>
+            <StackPanel Orientation="Horizontal" Margin="-350, 250, -255, -250">
+                <StackPanel>
+                    <Border Width="700" Height="35" Background="#3dddc2" Margin="150, 0, 0, 0" CornerRadius="20"/>
+                    <Border Width="700" Height="35" Background="#fc6586" Margin="0, 15, 0, 0" CornerRadius="20"/>
+                    <Border Width="700" Height="35" Background="#383660" Margin="75, 15, 0, 0" CornerRadius="20"/>
+                </StackPanel>
+                <StackPanel>
+                    <Border Width="700" Height="35" Background="#3dddc2" Margin="150, 0, 0, 0" CornerRadius="20"/>
+                    <Border Width="700" Height="35" Background="#fc6586" Margin="0, 15, 0, 0" CornerRadius="20"/>
+                    <Border Width="700" Height="35" Background="#383660" Margin="75, 15, 0, 0" CornerRadius="20"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+        <Grid Name="NewBucketBox" Visibility="Hidden" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="344" Margin="337,62,0,-305.333" VerticalAlignment="Top" Width="420">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="297*"></RowDefinition>
+                <RowDefinition Height="47*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ListView Margin="0,10,0,43.333" Background="#98AFC7" Opacity="0.7" Grid.ColumnSpan="2">
+                <ScrollBar Height="237" Width="11" Background="#2B547E"/>
+            </ListView>
+            <TextBlock Grid.Column="1" Grid.Row="1" Text="סך הכל" FontSize="25" Foreground="#ffddf4" FontFamily="Aharoni" HorizontalAlignment="Right" Margin="0,0,0,4.333"/>
+            <TextBox BorderThickness="0" Grid.Row="1" Grid.Column="0" Text="0.0" Foreground ="#ffcff1" FontSize="25" HorizontalAlignment="Left" TextWrapping="Wrap" Background="#181735"/>
+        </Grid>
+        <Grid x:Name="PreviousShoppingGrid" Visibility="Hidden" HorizontalAlignment="Left" Height="378" Margin="10,62,0,-339.333" VerticalAlignment="Top" Width="747" RenderTransformOrigin="-7.803,-0.283" Grid.ColumnSpan="2">
+            <Calendar x:Name="from" BorderBrush="#946198" Background="#C9A3CC" HorizontalAlignment="Left" Opacity ="0.6" Height="178" Margin="97,13,0,0" VerticalAlignment="Top" Width="186"/>
+            <Calendar Name="to" Background="#C9A3CC" BorderBrush="#946198" HorizontalAlignment="Left" Height="178" Opacity ="0.6" Margin="97,205,0,-5" VerticalAlignment="Top" Width="186"/>
+            <TextBlock Height="38" Margin="0,80,650,0" TextWrapping="Wrap" Text="מתאריך" FontSize="20" Foreground="#ffddf4" FontFamily="Aharoni" HorizontalAlignment="Right" VerticalAlignment="Top" Width="78"/>
+            <TextBlock Height="38" Margin="0,281,651,0" TextWrapping="Wrap" Text="עד תאריך" FontSize="20" Foreground="#ffddf4" FontFamily="Aharoni" HorizontalAlignment="Right" VerticalAlignment="Top" Width="78"/>
+            <DataGrid HorizontalAlignment="Left" BorderBrush="#946198" Background ="#C894CC" Opacity="0.7" Height="351" VerticalAlignment="Top" Width="449" Margin="288,17,0,0">
+
+            </DataGrid>
+            <ScrollBar Background="#181728" HorizontalAlignment="Left" Height="351" Margin="289,17,0,0" VerticalAlignment="Top" Width="18"/>
+        </Grid>
+        <Grid Name ="Statistics" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="305" Margin="59,101,0,-305.333" VerticalAlignment="Top" Width="698">
+            <Button Margin="568,59,0,176" Click="saveBarsToPdf" RenderTransformOrigin="-2.303,1.46"></Button>
+        </Grid>
+
+
+
+
+    </Grid>
+</Window>
