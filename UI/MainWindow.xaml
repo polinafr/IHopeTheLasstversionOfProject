@@ -277,8 +277,8 @@
             <ListView Margin="94.333,10,0,43.667" Background="#98AFC7" Opacity="0.7" Grid.Column="1" Grid.RowSpan="2">
                 <ScrollBar Height="237" Width="11" Background="#2B547E"/>
             </ListView>
-            <TextBlock Grid.Row="0" Grid.Column="0" Height="20" Width ="150" TextAlignment="Center" Text="דרך לתמונה" Background="#FFCEAB" Margin="149,45,491,87.667" Grid.ColumnSpan="2"/>
-            <TextBlock Grid.Row="0" Grid.Column="0" Width ="150" Height="20" TextAlignment="Center" Text="תיאור מוצר" Background="#FFCEAB" Margin="149,93,491,39.667" Grid.ColumnSpan="2"/>
+            <TextBox Grid.Row="0" Grid.Column="0" Height="20" Width ="150" TextAlignment="Center" Text="דרך לתמונה" Background="#FFCEAB" Margin="149,45,491,87.667" Grid.ColumnSpan="2"/>
+            <TextBox Grid.Row="0" Grid.Column="0" Width ="150" Height="20" TextAlignment="Center" Text="תיאור מוצר" Background="#FFCEAB" Margin="149,93,491,39.667" Grid.ColumnSpan="2"/>
             <Button Content="נווט" Grid.Column="0" Grid.Row="0"  Height="40" Click="ScanQR" Margin="0,35,0,77.667" RenderTransformOrigin="0.46,0.042" HorizontalAlignment="Left" Width="124">
                 <Button.Style>
                     <Style TargetType="Button">
@@ -374,12 +374,11 @@
             </DataGrid>
             <ScrollBar Background="#181728" HorizontalAlignment="Left" Height="351" Margin="289,17,0,0" VerticalAlignment="Top" Width="18"/>
         </Grid>
-        <Grid Name ="Statistics" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="305" Margin="59,101,0,-305.333" VerticalAlignment="Top" Width="698">
-            <Button Margin="568,59,0,176" Click="saveBarsToPdf" RenderTransformOrigin="-2.303,1.46"></Button>
-        </Grid>
-
 
 
 
     </Grid>
+
+
+
 </Window>

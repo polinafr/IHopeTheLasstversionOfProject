@@ -9,4 +9,9 @@
         Infants,
         Pets,
     }
+
+    public enum Statistics
+    {
+        Goods, Types, Money
+    }
 }

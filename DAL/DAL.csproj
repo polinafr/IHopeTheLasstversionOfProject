@@ -51,10 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DALimp.cs" />
     <Compile Include="DbContext\AppDbContext.cs" />
     <Compile Include="Entities\Bucket.cs" />
     <Compile Include="Entities\Good.cs" />
     <Compile Include="Enums\GoodType.cs" />
+    <Compile Include="IDAL.cs" />
     <Compile Include="Migrations\202108161828045_Initial.cs" />
     <Compile Include="Migrations\202108161828045_Initial.designer.cs">
       <DependentUpon>202108161828045_Initial.cs</DependentUpon>
